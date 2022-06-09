@@ -1,27 +1,28 @@
 #include "main.h"
-
 /**
-  * more_numbers - Print 10 times the numbers since 0 up to 14
+  * print_square - Prints n squares according n number of times
+  * @size: The number of squares/number of times
   *
-  * Return: 10 times of the numbers since 0 up to 14
+  * Return: empty
   */
-void more_numbers(void)
+void print_square(int size)
 {
 	int x, y;
 
-	for (x = 0; x < 10; x++)
+	if (size <= 0)
 	{
-		for (y = 0; y <= 14; y++)
-		{
-			if (y > 9)
-			{
-				_putchar((y / 10) + '0');
-			}
-
-			_putchar((y % 10) + '0');
-		}
-
 		_putchar('\n');
 	}
-}
+	else
+	{
+		for (x = 0; x < size; x++)
+		{
+			for (y = 0; y < size; y++)
+			{
+				_putchar(35);
+			}
 
+			_putchar('\n');
+		}
+	}
+}
